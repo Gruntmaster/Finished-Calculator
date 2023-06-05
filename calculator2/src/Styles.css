@@ -1,0 +1,57 @@
+*, *::before, *::after {
+ box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to right, #00ffc8,#00f7ff);
+}
+
+.calculator-box {
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7, auto) repeat(5, 6rem);
+    width: 30rem;
+    height: 30rem;
+    justify-content: center;
+}
+
+.calculator-box > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgb(0, 255, 242);
+}
+
+.calculator-box > button:hover,
+.calculator-box > button:focus {
+    background-color:rgb(0, 153, 255);
+}
+
+.Span-two-size{
+    grid-column: span 2;
+}
+
+.Result {
+    grid-column: 1/-1;
+    background-color: rgb(179, 245, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.Result .Previous-operand{
+    color: rgb(111, 21, 163);
+    font-size: 1.5rem;
+}
+
+.Result .Current-operand{
+    color: violet;
+    font-size: 2.5rem;
+    
+}
